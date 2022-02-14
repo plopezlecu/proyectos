@@ -1,30 +1,27 @@
-/* Color de fondo para el menú de navegación */
-.topnav {
-  background-color: #333;
-  overflow: hidden; /*El contenido es recortado y no se muestran barras de posición.*/
-}
+/* Menú de navegación */
+nav.principal ul {
+  display: flex;
+  list-style: none;	
+	flex-direction: row;	
+	justify-content: center;
+  padding: 0;
+  margin: 0;
+  background-color: #333;  
+} 
 
-/* Estilo de los enlaces en el menú de navegación */
-.topnav a {
-  float: left;
-  display: block;
+/* estilos del texto del menú de navegación */
+nav.principal ul li a {
+  display: block;      
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 17px;    
 }
 
-/* Estilo de los enlaces en el menú de navegación al pasar por encima */
-.topnav a:hover {
-  background-color: #bf59d9;
-  text-decoration: none;
-  color: #e5a3d7;  
-}
-
-/* Oculta el link que se mostrará en las pantallas pequeñas */
-.topnav .icon {
-  display: none;
+/* Color cuando nos posicionamos encima del menú de navegación*/
+nav.principal ul li a:hover {
+  background-color: #bf59d9;  
 }
 
 /* Estilos que van a ir en el body */
@@ -55,15 +52,14 @@ a:hover {
 	max-width: 960px;
 	margin: 0 auto;
 	position: relative;
-	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);	
 }
 
 /* Estilo para las imagenes */
 img {
 	border-color: #8f1eac;
 	border-width: medium;
-    border-style: solid;
-    border-radius: 30%;	
+  border-style: solid;
+  border-radius: 30%;	
 }
 
 /* Estilo para la foto donde va el encabezado, foto del curriculum */
@@ -94,10 +90,10 @@ img {
 /* Estilo para la clase principal contenedora dentro del body */
 .main {
 	background: #fff;
-    max-width: 960px;
-    margin: 0 auto;
-    position: relative;
-    box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);  
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 10%);  
 }
 
 /* Estilo para los títulos dentro de la clase principal */
@@ -143,7 +139,6 @@ img {
   margin-bottom: 10px;
   font-weight: 500;
   position: relative;
-  overflow: hidden;  
 }
 
 /* Estilo para los elementos donde irán los textos */
@@ -154,6 +149,11 @@ img {
 /* Estilo para el último elemento donde irán los textos, para dejar espacio en la parte inferior */
 .item:last-child {
   padding-bottom: 15px;
+}
+
+/* Así se leerá más claro */
+p, li {
+  letter-spacing: 0.1em;
 }
 
 /* Estilo para el área donde irán las imagenes */
@@ -201,6 +201,12 @@ img:hover{
 	transition: .9s;	
 }
 
+/* Usando un selector de id hacemos que no afecte a la foto de la cabecera */
+img#foto:hover{
+	opacity: 100;
+	transition: 0;	
+}
+
 /* Estilo para los iconos del footer de las redes sociales */
 .iconos-footer .fab {
 	font-size: 15px;
@@ -244,30 +250,17 @@ img:hover{
    de la pantalla sea 768px */
 @media (max-width: 768px) {  
 
-  /* Estilos para hacer el menú superios responsive*/
-  .topnav a:not(:first-child) {
-    display: none;
-  }
+  nav.principal ul {    
+    flex-direction: column;    
+  } 
 
-  .topnav a.icon {
-    float: right;
-    display: block;
+  .nombre {
+    font-size: 20px;    
+    line-height: 50px;    
   }
-
-  .topnav.responsive {
-    position: relative;
-  }
-
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
+  
+  .profesion {          
+    margin-top: 0px;    
   }
 
   .main {
@@ -288,6 +281,10 @@ img:hover{
 	  margin-left: 20px;
   }
 
+  .img-area {    
+    flex-direction: column;        
+  }
+
   .footer{
 	  padding-top: 20px;
   }
@@ -302,8 +299,16 @@ img:hover{
 @media screen and (max-width: 400px) {
   
   /* Para que no quede la imagen desplazada le quito el margen izquierdo */
-  .titulo-foto img{
+  .titulo-foto img {
       margin-left: 0px;
+  }
+
+  .nombre {
+    line-height: 50px;
+  }
+
+  .profesion {          
+    margin-top: 0px;    
   }
 
   /* Para que no quede la imagen desplazada le quito el margen izquierdo */
