@@ -23,23 +23,21 @@
 		<!-- sección de la cabecera donde está la foto personaly la profesión -->
 		<section class="titulo-foto">		
 			<!-- foto de la persona -->
-			<img src="imagenes/foto.jpg" width="220" height="220" alt="Foto de Patricia"/>			
-			<h1 class="nombre">Patricia López</h1>
-			<h3 class="profesion">Programadora</h3>
+			<img id="foto" src="imagenes/foto.jpg" width="220" height="220" alt="Foto de Patricia"/>			
+			<h1 class="nombre">Patricia López Lecumberri</h1>
+			<h3 class="profesion">Desarroladora de Software</h3>
 			<br clear="left"><!-- Saltara verticalmente hasta encontrar el lateral izquierdo libre.  -->			
 		</section>
 
 		<!-- Menú principal desde donde se accederá al resto de las secciones -->
-		<div class="topnav" id="menuResp">
-			<a href="#sobremi">Sobre mi</a>
-			<a href="#experiencia">Experiencia</a>
-			<a href="#trabajo">Trabajo</a>
-			<a href="#contacto">Contacto</a>
-			<!-- función para ocultar el menú principal y mostrar el responsive -->
-			<a href="javascript:void(0);" class="icon" onclick="ocultarMenu()">
-			  <i class="fa fa-bars"></i>
-			</a>
-		</div>
+		<nav class="principal">
+			<ul>
+				<li><a href="#sobremi">Sobre mi</a></li>
+				<li><a href="#experiencia">Experiencia</a></li>
+				<li><a href="#trabajo">Trabajo</a></li>				
+				<li><a href="#contacto">Contacto</a></li>
+			</ul>
+		</nav>		
 
 		<section class="seccion">
 			<!-- Sección sobre mi -->	
@@ -128,15 +126,6 @@
         </div>
     </footer>
 
-	<script>
-		function ocultarMenu() {
-			var x = document.getElementById("menuResp");
-			if (x.className === "topnav")
-				x.className += " responsive";
-			else
-				x.className = "topnav";			
-		}
-	</script>        
 </body>
 </html> 
 
