@@ -277,7 +277,7 @@ img#foto:hover{
     flex-direction: column;        
     padding-left: 0px;
     padding-right: 0px;    
-    margin-left: -30px;
+    margin-left: -40px;
   }
 
   .img-galeria {
@@ -329,7 +329,7 @@ img#foto:hover{
     flex-direction: column;        
     padding-left: 0px;
     padding-right: 0px;  
-    margin-left: -30px;  
+    margin-left: -40px;  
   }
   
 }
