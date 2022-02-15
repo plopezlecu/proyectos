@@ -184,7 +184,7 @@ img:hover{
 /* Usando un selector de id hacemos que no afecte a la foto de la cabecera */
 img#foto:hover{
 	opacity: 100;
-	transition: 0;	
+	transition:none;	
 }
 
 /* Estilo para los iconos del footer de las redes sociales */
