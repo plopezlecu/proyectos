@@ -39,12 +39,6 @@ body {
   margin-right: 40px;    
 }
 
-/* Color para los enlaces, quitamos el subrayado */
-a {
-  color: #bf59d9;
-  text-decoration: none;
-}
-
 /* Color para los enlaces al pasar sobre ellos, quitamos el subrayado */
 a:hover {
   text-decoration: underline;
@@ -71,6 +65,7 @@ a:hover {
   color: rgba(255, 255, 255, 0.6);    
   margin: -80px 0 0 10px;   
 }
+
 
 /* Estilo para la clase principal contenedora dentro del body */
 .main {
@@ -178,31 +173,6 @@ a:hover {
 /* Estilo para las imagenes que irán en la galería de imagenes */
 .img-galeria {
 	padding: 0px 10px 20px;
-}
-
-/* Imagenes que irán en la galería cuando la pantalla sea mayor de 400 */
-.img1{
-  content: url("../imagenes/tenerife.png");
-}
-
-.img2{
-  content: url("../imagenes/chefsilvia.png");
-}
-
-.img3{
-  content: url("../imagenes/cabildoTNF.png");
-}
-
-.img4{
-  content: url("../imagenes/RESTAURANTECONJETURAS.png");
-}
-
-.img5{
-  content: url("../imagenes/present_ONLINE.png");
-}
-
-.img6{
-  content: url("../imagenes/PROYECTO_BARBISTRO.png");
 }
 
 /* Efecto cuando pasamos por encima de las imagenes, se vuelve algo opaca en el intervalo marcado */
