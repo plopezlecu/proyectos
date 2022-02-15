@@ -277,11 +277,11 @@ img#foto:hover{
     flex-direction: column;        
     padding-left: 0px;
     padding-right: 0px;    
+    margin-left: -30px;
   }
 
   .img-galeria {
-    padding: 0px 0px 0px;
-    margin-left: -10px;
+    padding: 0px 0px 0px;    
   }
 
   .footer{
@@ -322,14 +322,14 @@ img#foto:hover{
 
   /* Para que no quede la imagen desplazada le quito el margen izquierdo */
   .img-galeria {    
-    padding: 0px 0px 0px;
-    margin-left: -10px;
+    padding: 0px 0px 0px;    
   }
 
   .img-area {    
     flex-direction: column;        
     padding-left: 0px;
-    padding-right: 0px;    
+    padding-right: 0px;  
+    margin-left: -30px;  
   }
   
 }
