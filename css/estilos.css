@@ -27,6 +27,11 @@ body {
 	text-decoration: underline;
 }
 
+p{
+    padding-top: 15px;    
+    padding-bottom: 15px;
+}
+
 img.pequeña{
 	width: 50px;
 	height: 50px;
@@ -150,8 +155,7 @@ img.izquierda {
 .icono{	
 	background-color: #FFF2EB;
 	padding: 10px;
-	overflow: auto;
-	border-bottom: solid 1px orange;
+	overflow: auto;	
 }
 
 .letra{
@@ -159,11 +163,15 @@ img.izquierda {
 	text-align: justify;
 }
 
+.colorabajo{
+	border-bottom: solid 1px orange;
+}
+
 iframe{
 	width: 100%;
 }
 
-section.margen40{
+.margen40{
 	margin-left: 40px;
 	margin-right: 40px;
 }
@@ -175,19 +183,7 @@ section.margen40{
 .pie .negro{
 	background-color: black;
 }
-/*
-.pie ul {
-	display: flex;
-	list-style: none;		
-	justify-content: center;	
-	padding: 0;
-	margin: 0;			
-}
 
-.pie li{
-	padding: 10px;
-}
-*/
 .pie ul{
 	display: flex;
 	list-style: none;	
@@ -210,23 +206,42 @@ section.margen40{
 /* Estilos para tener en cuenta en los responsive cuando la anchura máxima
    de la pantalla sea 768px */
 @media (max-width: 768px) {  
+	body {
+		margin-left: 10px;
+		margin-right: 10px;
+	  }
+nav.principal ul li a {    
+    padding: 5px 5px;
+    font-size: 17px;
+}
 
-	/*
-  body {
-	margin-left: 0px;
-    margin-right: 0px;
-  }
+.orden1{
+	order: 3;
+}
+.orden2{
+	order: 2;
+	font-size: medium;
+}
+.orden3{
+	order: 1;
+}
 
-  .central {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-*/
 .grid {
 	padding: 10px 10px;
 	grid-auto-rows: auto;
 }
 
+.margen40{
+	margin-left: 0;
+	margin-right: 0;
+}
+h3{
+	font-size: medium;
+}
+
+p{
+	padding-bottom: 0px;
+}
   nav.principal ul {    
     flex-direction: column;    
   }   
@@ -236,8 +251,15 @@ section.margen40{
   }
 
   .pie ul {
-	flex-direction: column;   			
+	flex-direction: column;  } 			
+.pie ul li{
+	padding: 5px 5px;
 }
+
+	.listaicono{
+	flex-direction: row!important;	}
+
+
 /*
   .main {
     padding: 30px;
@@ -271,8 +293,14 @@ section.margen40{
 
 /* Estilos para tener en cuenta en los responsive cuando la anchura máxima
    de la pantalla sea 400px */
-@media screen and (max-width: 400px) {
-  
+@media screen and (max-width: 912px) {
+	body {
+		margin-left: 10px;
+		margin-right: 10px;
+	  }
+	  .grid{
+		padding: 5px 100px;
+	  }
 	/*
   body {
 	  margin-left: 0px;
@@ -313,7 +341,7 @@ section.margen40{
   /* El primer valor corresponde al hueco entre filas */
   /* El segundo valor corresponde al hueco entre columnas */
   .grid {
-    grid-gap: 2rem 0;
+    grid-gap: 1rem 0;
   }
 }
 
