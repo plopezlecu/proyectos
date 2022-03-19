@@ -2,6 +2,8 @@
 	box-sizing: border-box;
 }
 
+/* He puesto para el body un tipo de letra unos márgenes
+e interlineado para que quede más límpia la página */
 body {  
 	font-family: Arial, Helvetica, sans-serif; 
 	margin-top: 20px;
@@ -9,7 +11,7 @@ body {
 	margin-right: 100px;
 	line-height : 25px;
 }
-
+/* He puesto un display grid para que quede encuadrado el menú */
 .grid {
 	display: grid;	
 	grid-template-columns: 0.5fr 2fr 0.5fr;
@@ -18,37 +20,44 @@ body {
     padding: 15px 250px;
 }
 
+/* Aquí he puesto una animación en espejo
+para darle algo de vidilla a la página.
+Logo de la página superior */
+.menutop.orden1:hover {
+	-webkit-transform: rotateY(180deg);
+	-webkit-transform-style: preserve-3d;
+	transform: rotateY(180deg);
+	transform-style: preserve-3d;
+}
+
+/* Centramos el menú superior */
 .menutop {
 	align-self: center;
     text-align: center;
 }
 
+/* subrayado */
 .subra{
 	text-decoration: underline;
 }
 
+/* Ponemos un espacio a los párrados superior e inferior
+para que no queden tan pegamos*/
 p{
     padding-top: 15px;    
     padding-bottom: 15px;
 }
 
-img.pequeña{
-	width: 50px;
-	height: 50px;
-}
-
+/* clase que usamos para el icono de la luna
+para fijar su tamaño y margen */
 img.mediana{
 	width: 100px;
 	height: 100px;
 	margin: 5px;
 }
 
-img.grande{
-	width: 200px;
-	height: 200px;
-}
 
-/* Menú de navegación */
+/* Menú de navegación princpal entre páginas */
 nav.principal ul{
 	display: flex;
 	list-style: none;	
@@ -68,13 +77,12 @@ nav.principal ul li a {
 	font-size: 17px;    
   }
     
-/* Subrayado cuando nos posicionamos encima del menú de navegación */
+/* Cambio color cuando nos posicionamos encima del menú de navegación */
 nav.principal ul li a:hover {	
 	background-color: #A5EDFF;
 }
 
-
-/* Menú de navegación */
+/* Menú de idiomas */
 .listatop ul{
 	display: flex;
 	list-style: none;	
@@ -84,7 +92,7 @@ nav.principal ul li a:hover {
 	margin: 0;	
 }
 
-/* estilos del texto del menú de navegación */
+/* estilos del texto del menú de idiomas */
 .listatop ul li a {
 	display: block;      	
 	text-align: center;
@@ -92,20 +100,24 @@ nav.principal ul li a:hover {
 	text-decoration: none;
   }
     
-/* Subrayado cuando nos posicionamos encima del menú de navegación */
+/* Cambio color cuando nos posicionamos encima del menú de idiomas */
 .listatop ul li a:hover {	
 	background-color: #A5EDFF;
 }
 
+/* Cambio color cuando nos posicionamos encima del menú de pie de página */
 .listafooter li a:hover {	
 	background-color: #A5EDFF;
 	text-decoration: none;
 }
 
+/* Espacio que he puesto en los fabicon para que se aprecie
+el cambio de color al pasar por encima */
 .fabi{
 	padding: 5px;
 }
 
+/* lista de fotos de Lenguales */
 .fotos ul {
 	display: flex;
 	list-style: none;	
@@ -133,57 +145,70 @@ img{
 	width: 150px;
 	height: 150px;	    
 }
-
-img.redonda{
-	border-radius:75px;
-}
-
-img.izquierda {
-	float: left;	
-    margin-right: 15px;
-    margin-bottom: 1rem;	
-}
-
-.arriba{
-	float: inline-start;
-}
-
-.salto {
-	clear: both;
-}
-
+/* estilo para el emoticon con mi imagen */
 .icono{	
 	background-color: #FFF2EB;
 	padding: 10px;
 	overflow: auto;	
 }
 
+/* Aquí he puesto una animación en espejo
+para darle algo de vidilla a la página 
+Emoticon con mi imagen */
+.izquierda.redonda:hover {
+	-webkit-transform: rotateY(180deg);
+	-webkit-transform-style: preserve-3d;
+	transform: rotateY(180deg);
+	transform-style: preserve-3d;
+}
+/* redondeo del emoticon de mi imagen*/
+img.redonda{
+	border-radius:75px;
+}
+/* Para poner el texto al lado de la foto */
+img.izquierda {
+	float: left;	
+    margin-right: 15px;
+    margin-bottom: 1rem;	
+}
+
+.salto {
+	clear: both;
+}
+
+/* Formato para las letras de los párrafos de ModuleBundlers */
 .letra{
 	font-size: large;
 	text-align: justify;
 }
-
+/* Efecto de párrafo subrayado */
 .colorabajo{
 	border-bottom: solid 1px orange;
 }
 
+/* anchura para el iframe donde meteremos el videro*/
 iframe{
 	width: 100%;
 }
 
+/*  Margen para el apartado de los párrafos de ModuleBundlers*/
 .margen40{
 	margin-left: 40px;
 	margin-right: 40px;
 }
+/* Clases del pie de página */
+/* alineación y color del texto*/
 .pie{
 	text-align: center;	
 	color: white;
 }
 
+/* fondo negro */
 .pie .negro{
 	background-color: black;
 }
 
+/* estilo de la lista con el menu inferior */
 .pie ul{
 	display: flex;
 	list-style: none;	
@@ -203,134 +228,94 @@ iframe{
 	font-size: 17px;    
   }
 
-/* Estilos para tener en cuenta en los responsive cuando la anchura máxima
-   de la pantalla sea 768px */
-@media (max-width: 768px) {  
-	body {
-		margin-left: 10px;
-		margin-right: 10px;
-	  }
-nav.principal ul li a {    
-    padding: 5px 5px;
-    font-size: 17px;
-}
-
-.orden1{
-	order: 3;
-}
-.orden2{
-	order: 2;
-	font-size: medium;
-}
-.orden3{
-	order: 1;
-}
-
-.grid {
-	padding: 10px 10px;
-	grid-auto-rows: auto;
-}
-
-.margen40{
-	margin-left: 0;
-	margin-right: 0;
-}
-h3{
-	font-size: medium;
-}
-
-p{
-	padding-bottom: 0px;
-}
-  nav.principal ul {    
-    flex-direction: column;    
-  }   
-
-  .fotos ul {    
-    flex-direction: column;    
-  }
-
-  .pie ul {
-	flex-direction: column;  } 			
-.pie ul li{
-	padding: 5px 5px;
-}
-
-	.listaicono{
-	flex-direction: row!important;	}
-
-
-/*
-  .main {
-    padding: 30px;
-  }
-
-  .main .upper-row {
-    margin-bottom: 0;
-  }    
-  .img-area {    
-    flex-direction: column;        
-    padding-left: 0px;
-    padding-right: 0px;    
-    margin-left: -40px;
-  }
-
-  .img-galeria {
-    padding: 0px 0px 0px;    
-  }
-
-  .footer{
-	  padding-top: 20px;
-  }  
-
-.footer .firma{
-	  display: block;
-  }
-
-*/
-  
-}
-
-/* Estilos para tener en cuenta en los responsive cuando la anchura máxima
-   de la pantalla sea 400px */
+  /* Estilos para tener en cuenta en los responsive cuando la anchura máxima
+   de la pantalla sea 912px */
 @media screen and (max-width: 912px) {
 	body {
 		margin-left: 10px;
 		margin-right: 10px;
-	  }
-	  .grid{
+	}
+	.grid{
 		padding: 5px 100px;
-	  }
-	/*
-  body {
-	  margin-left: 0px;
-    margin-right: 0px;
-  }
+	}	
+}
 
-  .central {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-*/
- 
-  /* Para que no quede la imagen desplazada le quito el margen izquierdo */
-  /*
-  .img-galeria {    
-    padding: 0px 0px 0px;    
-  }
+/* Estilos para tener en cuenta en los responsive cuando la anchura máxima
+   de la pantalla sea 768px */
+@media (max-width: 768px) {  
+	/* Bajamos la anchura de los margenes para que se vea bien en móvil */	
+	body {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	/* Bajamos los espacios y fuentes del menu principal para que se vea bien en móvil */	
+	nav.principal ul li a {    
+		padding: 5px 5px;
+		font-size: 17px;
+	}
 
-  .img-area {    
-    flex-direction: column;        
-    padding-left: 0px;
-    padding-right: 0px;  
-    margin-left: -40px;  
-  }
-  */
+	/* Como la lista cambia de orden al pasar a formato movil
+	usamos el css para asignar el orden que queramos */
+	.orden1{
+		order: 3;
+	}
+	.orden2{
+		order: 2;
+		font-size: medium;
+	}
+	.orden3{
+		order: 1;
+	}
+
+	/* Bajamos el espacio del encabezado superior y lo pasamos a filas */
+	.grid {
+		padding: 10px 10px;
+		grid-auto-rows: auto;
+	}
+
+	/* Quitamos el margen de los párrafos de Module Bundlers */
+	.margen40{
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	/* bajamos el tamaño del h3 */
+	h3{
+		font-size: medium;
+	}
+
+	/* Quitamos el margen inferior de los párrafos para que se lea mejor */
+	p{
+		padding-bottom: 0px;
+	}
+
+	/* Pasamos el menu principal a columna */
+	nav.principal ul {    
+		flex-direction: column;    
+	}   
+
+	/* Pasamos las fotos a columna*/
+	.fotos ul {    
+		flex-direction: column;    
+	}
+
+	/* Pasamos los menu inferiores y listas a columnas*/
+	.pie ul {
+		flex-direction: column;  
+	}
+
+	.pie ul li{
+		padding: 5px 5px;
+	}
+
+	.listaicono{
+		flex-direction: row!important;	
+	} 
 }
 
 /* Las reglas que estén dentro de la media query se van a aplicar */
-/* solo cuando la ventana del navegador sea menor o igual a 48rem */
-@media (max-width: 48rem) {
+/* solo cuando la ventana del navegador sea menor o igual a 360px */
+@media (max-width: 567px) {
 
   /* Con este selector indicamos que ese estilo debe aplicarse a */
   /* TODOS los elementos que sean hijos directos de la grilla */
@@ -344,296 +329,3 @@ p{
     grid-gap: 1rem 0;
   }
 }
-
-/*
-*{
-	margin:0;
-	padding:0;
-	box-sizing:border-box
- }
-
-html
-{
-	position:relative;
-	min-height:100%
-}
-.body
-{
-	margin-bottom:200px;
-	font:16px/1.6 Georgia,Times,serif;
-	color:#000
-}
-
-.encabezado
-{
-	background:url() no-repeat bottom;		
-	background-size:cover
-}
-
-.cabecera
-{
-	height:300px;
-	padding-top:100px
-}
-
-.h3
-{
-	font-size:2rem
-}
-
-@media (min-width:768px)
-{
-	.cabecera
-	{
-		height:300
-	}	
-}
-
-.body-cv__h1,.body-cv__h2,.body-cv__h3
-{
-	font-family:Helvetica,Arial,sans-serif;
-	line-height:1em;
-	margin-bottom:1.5rem
-}
-
-.body-cv__h1
-{
-	font-size:3.5rem;
-	font-weight:400;
-	text-align:center
-}
-
-.body-cv__h2
-{
-	font-size:3rem
-}
-
-.body-cv__h4
-{
-	font-size:1rem
-}
-
-.body-cv__p
-{
-	font-size:1.1rem;
-	margin-bottom:1rem
-}
-
-.pie__abbr
-{
-	text-decoration:none
-}
-
-.sr
-{
-	position:absolute;
-	height:1px;
-	width:1px;
-	overflow:hidden;
-	clip:rect(1px,1px,1px,1px)
-}
-
-.articulo__cabecera,.pie
-{
-	width:100%
-}
-
-.pie
-{
-	position:absolute;
-	bottom:0;
-	height:175px;
-	padding-top:5px;
-	padding-bottom:15px;
-	background-color:#000;
-	color:#fff
-}
-
-.pie__p
-{
-	font-size:.8rem
-}
-
-.container
-{
-	margin-right:auto;
-	margin-left:auto;
-	padding-right:15px;
-	padding-left:15px;
-	width:100%
-}
-
-@media (min-width:576px)
-{
-	.container
-	{
-		max-width:540px
-	}
-
-}
-
-@media (min-width:768px)
-{
-	.container
-	{
-		max-width:720px
-	}
-}
-
-@media (min-width:992px)
-{
-	.container
-	{
-		max-width:960px
-	}
-}
-
-@media (min-width:1200px)
-{
-	.container
-	{
-		max-width:1140px
-	}
-}
-
-.secciones
-{
-	overflow:auto;
-	padding-top:10px;
-	padding-bottom:10px
-}
-
-.enlaces
-{
-	color:#000;
-	text-decoration:none
-}
-
-.enlaces:hover
-{
-	color:#ff3a20
-}
-
-.enlaces:current
-{
-	border-bottom:2px solid #000
-}
-
-.navegacion
-{
-	text-align:center;
-	font-weight:600;
-	margin-bottom:30px
-}
-
-.navegacion__ul
-{
-	list-style:none;
-	font-size:1rem
-}
-	@media (min-width:768px)
-{
-
-.navegacion ul li
-{
-	display:inline-block;
-	padding-left:15px;
-	padding-right:15px;
-	font-size:1.5rem;
-	font-weight:700
-}
-
-.navegacion ul li:first-child
-{
-	padding-left:0
-}
-
-.navegacion ul li:last-child
-{
-	padding-right:0
-}
-
-}
-
-.articulo
-{
-	text-align:justify
-}
-
-.articulo__h2,.articulo__h3
-{
-	text-align:left
-}
-
-.articulo__autor
-{
-	background-color:#f7f2f3;
-	padding:15px;
-	overflow:auto
-}
-
-.articulo__meta
-{
-	font-size:1.3rem
-}
-
-.articulo__bio
-{
-	margin-top:50px;
-	font-size:1rem
-}
-
-.articulo_intro
-{
-	font-size:1.6rem;
-	margin-top:3rem;
-	margin-bottom:2rem
-}
-
-.parrafo-bordes
-{
-	border-right:5px solid #ff3a20;
-	background-color:#f7f2f3;
-	padding:15px 30px;
-	margin:15px 0
-}
-
-.articulo__pie
-{
-	width:80%;
-	margin-left:auto;
-	margin-right:auto;
-	font-size:.75rem;
-	text-align:center
-}
-
-@media (min-width:768px)
-{
-	.floatLeft	
-	{
-		float:left
-	}
-	.floatRight
-	{
-		float:right
-	}
-	.topics .floatLeft
-	{
-		width:33%;
-		padding:15px
-	}
-
-}
-
-.topics
-{
-	background-color:#f7f2f3;
-	text-align:center
-}
-
-.topics__img
-{
-	max-width:100%;
-	height:auto
-}
-*/
