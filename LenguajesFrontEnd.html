@@ -6,7 +6,8 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" href="images/favicon.ico">  
+		<!-- flavicon -->
+		<link rel="shortcut icon" href="images/medialuna.ico">  
 		<!-- Google Font -->
 		<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 		<!-- FontAwesome -->
@@ -16,18 +17,20 @@
 		<!-- Theme CSS -->  
 		<link id="theme-style" rel="stylesheet" href="css/estilos.css">		
 	</head>
-	<body class="body">		
-		<header class="grid">			
-		  <div class="menutop orden1"><img src="images/luna1.gif" alt="luna negra" class="mediana" /></div>
-		  <h2 class="menutop orden2">Enciclopedia de Front-End</h2>
-		  <div class="menutop listatop orden3">
-			<ul>
-				<li><a href="#">CA|</a></li>
-				<li class="subra"><a href="#"><span class="subra">ES</span></a></li>
-				<li><a href="#">|EN</a></li>				
-			</ul>
-		  </div>			  
-		</header>				
+	<body class="body">
+		<header class="grid">
+			<!-- encabezado con el logo, el nombre del sitio y el menu de idioma -->
+		  	<div class="menutop orden1"><img src="images/luna1.gif" alt="luna negra" class="mediana" /></div>
+		  	<h2 class="menutop orden2">Enciclopedia de Front-End</h2>
+		  	<div class="menutop listatop orden3">
+				<ul>
+					<li><a href="#">CA|</a></li>
+					<li class="subra"><a href="#"><span class="subra">ES</span></a></li>
+					<li><a href="#">|EN</a></li>
+				</ul>
+		  	</div>
+		</header>
+		<!-- Menú principal de la web que nos lleva a las diferentes páginas -->
 		<nav class="principal">
 			<ul>
 				<li><a href="ModuleBundlers.html">Module-Bundlers</a></li>
@@ -36,7 +39,9 @@
 			</ul>
 		</nav>			
 		<main>
-			<article class="container">                
+			<!-- Imagenes adaptativas -->
+			<article class="container">
+				<!-- imagen que cambiará dependiendo de la resolución de la pantalla -->
 				<picture>
 					<source srcset="images/front-end-big.jpg" media="(min-width: 1024px)" class="ajustada">
 					<source srcset="images/front-end-medium.jpg" media="(min-width: 640px) and (max-width: 1023px)" class="ajustada">
@@ -48,6 +53,7 @@
                     <p>A pesar de que hay varios lenguajes que se usan en el frontend, nosotros nos fijaremos en tres elementos: 
                         HTML, CSS y Javascript (aunque HTML y CSS no son lenguajes de programación propiamente dichos).</p>
 				</div>	
+				<!-- lista de fotos explicativas de los diferentes lenguales -->
                 <div class="fotos">
                     <ul>
                         <li><img src="images/javascript.webp" class="ajustada" alt="Que es java" /><p>¿Qué es Java Script?</p></li>
@@ -57,18 +63,22 @@
                 </div>                					
 			</article>			
 		</main>
+		<!-- Pie de la página -->
 		<footer class="pie">
 			<div class="container">
 				<div class="negro">
+					<!-- logo de la página con el color invertido -->
 					<img src="images/luna1.1.gif" alt="luna blanca" class="mediana" />
 					<h3>Enciclopedia de Front-End</h3>
 					<div>Calle Cantones 9. 31243 Arróniz<br>Tel. 948 22 65 36<br><a href="mailto:info@enciclopediafrontend.org">info@enciclopediafrontend.org</a></div>
+					<!-- Lista con los iconos de redes que irían a cada página correspondiente de cada red social -->
 					<ul class="listafooter listaicono">
 						<li><a href="#" class="fabi"><i class="fab fa-twitter"></i></a></li>
 						<li><a href="#" class="fabi"><i class="fab fa-facebook-f"></i></a></li>
 						<li><a href="#" class="fabi"><i class="fab fa-instagram"></i></a></li>
 						<li><a href="#" class="fabi"><i class="fab fa-youtube"></i></a></li>					
 					</ul>
+					<!-- Lista con apartados propios de la página que irían a cada apartado correspondiente -->
 					<ul class="listafooter">
 						<li><a href="#">Quiénes somos</a></li>
 						<li><a href="#">Política de privacidad</a></li>
